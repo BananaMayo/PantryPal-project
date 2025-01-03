@@ -2,31 +2,14 @@
 import 'package:flutter/material.dart';
 import 'package:pantrypal/main.dart';
 
-ThemeData appTheme = ThemeData(
-  primarySwatch: Colors.green,
-  scaffoldBackgroundColor: Color(0xFF002B00), // Dark green background
-  textTheme: TextTheme(
-    displayLarge: TextStyle(color: Colors.amber, fontSize: 24, fontWeight: FontWeight.bold),
-    bodyLarge: TextStyle(color: Colors.white, fontSize: 16),
-    labelLarge: TextStyle(color: Colors.green, fontSize: 18, fontWeight: FontWeight.bold),
-  ),
-  elevatedButtonTheme: ElevatedButtonThemeData(
-    style: ElevatedButton.styleFrom(
-        backgroundColor: Color(0xFF00A800), // Green button color
-        foregroundColor: Colors.white, // Text color
-        shadowColor: Colors.green, // Green shadow color
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-        side: BorderSide(width: 5)
-    ),
-  ),
-);
+
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFF002B00), // Match background color
+        backgroundColor: Color(0xFF002B00),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -34,34 +17,44 @@ class HomePage extends StatelessWidget {
               backgroundColor: Colors.green,
               child: Text('N', style: TextStyle(color: Colors.white)),
             ),
-            Text('PantryPal', style: TextStyle(color: Colors.lightGreen ,fontSize: 20, fontWeight: FontWeight.bold)),
+            Text('PantryPal', style: TextStyle(color: Colors.lightGreen ,fontSize: 25, fontWeight: FontWeight.bold)),
             Icon(Icons.menu, color: Colors.white),
           ],
         ),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
+
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+
+          // Top Section
+          Padding(
+            padding: const EdgeInsets.only(top: 40.0),
+            child: Text(
               'Welcome Niklas!',
               style: Theme.of(context).textTheme.displayLarge,
             ),
-            SizedBox(height: 20),
+          ),
 
-            /*Image.asset(
-              'assets/zero_waste.png', // Replace with your image file
-              width: 300,
-              height: 150,
-            ),*/
+          Center(
+            child: Image.asset(
+              'zero_waste.png',
+            ),
+          ),
 
-            SizedBox(height: 20),
-            ..._buildButtons(context), // Call function for buttons
-          ],
-        ),
+          // Bottom Section
+          Padding(
+            padding: const EdgeInsets.only(bottom: 40.0),
+            child: Column(
+              children: _buildButtons(context), // Call function for buttons
+            ),
+          ),
+        ],
       ),
     );
   }
+
+
 
   List<Widget> _buildButtons(BuildContext context) {
     final buttonLabels = [
@@ -74,10 +67,19 @@ class HomePage extends StatelessWidget {
     return buttonLabels.map((label) {
       return Padding(
         padding: const EdgeInsets.symmetric(vertical: 5.0),
+
         child: SizedBox(
           width: MediaQuery.of(context).size.width * 0.8, // 80% of screen width
           child: ElevatedButton(style:
-          ElevatedButton.styleFrom(shadowColor: Colors.green, // Green shadow color
+          ElevatedButton.styleFrom(
+            backgroundColor: Color(0xFF1B5A1B),
+            foregroundColor: Colors.amber,
+            //shadowColor: Colors.transparent,
+            shadowColor: Color(0xFF218521),
+            elevation: 3,
+            side: const BorderSide(width: 5, color: Color(0xFF1A3A16)),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+            padding: EdgeInsets.symmetric(vertical: 15),
           ),
             onPressed: () {
               Navigator.pushNamed(context, '/add-item');            },
