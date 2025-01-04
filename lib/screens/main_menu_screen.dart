@@ -36,11 +36,7 @@ class HomePage extends StatelessWidget {
             ),
           ),
 
-          Center(
-            child: Image.asset(
-              'zero_waste.png',
-            ),
-          ),
+          Center(child: Image.asset('assets/images/zero_waste.jpeg', width: 350, height: 200,),),
 
           // Bottom Section
           Padding(
@@ -82,7 +78,14 @@ class HomePage extends StatelessWidget {
             padding: EdgeInsets.symmetric(vertical: 15),
           ),
             onPressed: () {
-              Navigator.pushNamed(context, '/add-item');            },
+              if (label == 'View inventory') {
+                Navigator.pushNamed(context, '/inventory');
+              } else if (label == 'Add item') {
+                Navigator.pushNamed(context, '/add-item');
+              } else {
+                //logic for other buttons here
+              }
+            },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
