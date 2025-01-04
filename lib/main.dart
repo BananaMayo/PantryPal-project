@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'screens/main_menu_screen.dart';
 import 'screens/add_item_screen.dart';
+import 'screens/inventory_screen.dart';
 
 
 ThemeData appTheme = ThemeData(
@@ -37,71 +38,8 @@ class PantryPal extends StatelessWidget {
       routes: {
         '/': (context) => HomePage(),
         '/add-item': (context) => AddItemScreen(),
+        '/inventory': (context) => InventoryScreen(),
       },
-    );
-  }
-}
-
-
-
-
-class InventoryScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Inventory'),
-      ),
-      body: Center(
-        child: Text('This is the inventory screen.'),
-      ),
-    );
-  }
-}
-
-
-
-class SharedInventoryScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Shared Inventory'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Enter the email of the member you want to invite:',
-              style: TextStyle(fontSize: 16),
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(height: 20),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              child: TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  hintText: 'Enter email',
-                ),
-              ),
-            ),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                // Add invitation logic here
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content: Text('Invitation sent!'),
-                  ),
-                );
-              },
-              child: Text('Send Invitation'),
-            ),
-          ],
-        ),
-      ),
     );
   }
 }
