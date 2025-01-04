@@ -62,7 +62,23 @@ flutter:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   assets:
-    - images/zero_waste.png
+    - assets/images/zero_waste.jpeg
+    - assets/images/eggs.jpeg
+    - assets/images/milk.jpeg
+    - assets/images/bananas.jpeg
+    - assets/images/cheese.jpeg
+    - assets/images/bread.jpeg
+    - assets/images/chicken.jpeg
+    - assets/images/butter.jpeg
+    - assets/images/rice.jpeg
+    - assets/images/meat.jpeg
+    - assets/images/juice.jpeg
+    - assets/images/chili.jpeg
+    - assets/images/beer.jpeg
+    - assets/images/coffee.jpeg
+    - assets/images/ham.jpeg
+    - assets/images/onion.jpeg
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 
