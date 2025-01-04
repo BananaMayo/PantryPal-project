@@ -105,6 +105,7 @@ class AddItemScreen extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Color(0xFF1B5A1B),
                     foregroundColor: Colors.amber,
+                    side: const BorderSide(width: 5, color: Color(0xFF1A3A16)),
                     padding: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
                     textStyle: TextStyle(
                       fontSize: 18,
@@ -120,6 +121,7 @@ class AddItemScreen extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Color(0xFF1B5A1B),
                     foregroundColor: Colors.amber,
+                    side: const BorderSide(width: 5, color: Color(0xFF1A3A16)),
                     padding: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
                     textStyle: TextStyle(
                       fontSize: 18,
@@ -143,6 +145,7 @@ class AddItemScreen extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Color(0xFF1B5A1B),
                     foregroundColor: Colors.amber,
+                    side: const BorderSide(width: 5, color: Color(0xFF1A3A16)),
                     padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
                     textStyle: TextStyle(
                       fontSize: 18,
