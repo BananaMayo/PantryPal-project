@@ -8,7 +8,7 @@ class SharedInventoryScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Expiry dates',
+          'Shared Inventory',
           style: TextStyle(color: Colors.amber),
         ),
         backgroundColor: Colors.green.shade900,
