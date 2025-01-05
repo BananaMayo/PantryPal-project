@@ -31,19 +31,22 @@ class _InventoryPageState extends State<InventoryScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Inventory'),
-        backgroundColor: Colors.green.shade900,  // Setting the background color
+        title: Text(
+          'Inventory',
+          style: TextStyle(color: Colors.amber),
+        ),
+        backgroundColor: Colors.green.shade900,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.amber),  // Custom back arrow color
+          icon: Icon(Icons.arrow_back, color: Colors.amber),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        elevation: 0,  // Optional: Remove shadow if it's causing issues
+        elevation: 0,
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: GridView.builder(
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3, // 3 items per row
+            crossAxisCount: 3,
             crossAxisSpacing: 8.0,
             mainAxisSpacing: 8.0,
           ),
@@ -52,11 +55,10 @@ class _InventoryPageState extends State<InventoryScreen> {
             final item = inventory[index];
             return GestureDetector(
               onTap: () {
-                // handle item click
               },
               child: Card(
                 elevation: 4,
-                color: Colors.green.shade200,  // Set the background color to green
+                color: Colors.green.shade200,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [

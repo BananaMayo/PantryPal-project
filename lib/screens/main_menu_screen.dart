@@ -1,7 +1,5 @@
 // lib/screens/main_menu_screen.dart
 import 'package:flutter/material.dart';
-import 'package:pantrypal/main.dart';
-
 
 
 class HomePage extends StatelessWidget {
@@ -27,7 +25,6 @@ class HomePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
 
-          // Top Section
           Padding(
             padding: const EdgeInsets.only(top: 40.0),
             child: Text(
@@ -38,19 +35,16 @@ class HomePage extends StatelessWidget {
 
           Center(child: Image.asset('assets/images/zero_waste.jpeg', width: 350, height: 200,),),
 
-          // Bottom Section
           Padding(
             padding: const EdgeInsets.only(bottom: 40.0),
             child: Column(
-              children: _buildButtons(context), // Call function for buttons
+              children: _buildButtons(context),
             ),
           ),
         ],
       ),
     );
   }
-
-
 
   List<Widget> _buildButtons(BuildContext context) {
     final buttonLabels = [
@@ -65,12 +59,11 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 5.0),
 
         child: SizedBox(
-          width: MediaQuery.of(context).size.width * 0.8, // 80% of screen width
+          width: MediaQuery.of(context).size.width * 0.8,
           child: ElevatedButton(style:
           ElevatedButton.styleFrom(
             backgroundColor: Color(0xFF1B5A1B),
             foregroundColor: Colors.amber,
-            //shadowColor: Colors.transparent,
             shadowColor: Color(0xFF218521),
             elevation: 3,
             side: const BorderSide(width: 5, color: Color(0xFF1A3A16)),
@@ -78,12 +71,18 @@ class HomePage extends StatelessWidget {
             padding: EdgeInsets.symmetric(vertical: 15),
           ),
             onPressed: () {
-              if (label == 'View inventory') {
-                Navigator.pushNamed(context, '/inventory');
-              } else if (label == 'Add item') {
+              if (label == 'Add item') {
                 Navigator.pushNamed(context, '/add-item');
+              } else if (label == 'View inventory') {
+                Navigator.pushNamed(context, '/inventory');
+              } else if (label == 'Track expiry') {
+                Navigator.pushNamed(context, '/track-expiry');
+              } else if (label == 'Recipe suggestions') {
+                Navigator.pushNamed(context, '/recipe-suggestions');
+              } else if (label == 'Shared inventory') {
+                Navigator.pushNamed(context, '/shared-inventory');
               } else {
-                //logic for other buttons here
+                print('Unhandled button: $label');
               }
             },
             child: Row(
