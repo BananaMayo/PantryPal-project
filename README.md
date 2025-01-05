@@ -1,16 +1,5 @@
-# pantrypal
+# PantryPal
 
-A new Flutter project.
+### Human Computer Interaction Fall 2024 (CSM13401) - course project at the University of Helsinki.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**PantryPal** is an interactive app that helps you keep your at-home ingredients organized by tracking their quantities, expiry dates, and providing recipe suggestions based on what you already have. It also enables shared inventories for households to collaborate on grocery management seamlessly.
